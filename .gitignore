@@ -1,0 +1,16 @@
+# Ignore Files from git
+# Vim swap files
+*.swp
+*.swo
+*.swn
+
+# Vim backup files
+*~
+.*~
+
+# Vim undo files
+*.un~
+.*.un~
+
+# Vim session files (if you use them)
+Session.vim
