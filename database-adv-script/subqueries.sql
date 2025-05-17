@@ -11,4 +11,4 @@ SELECT * FROM users
   (SELECT bookings.user_id 
     FROM bookings 
     GROUP BY bookings.user_id 
-    HAVING SUM(bookings.user_id) > 3);
+    HAVING COUNT(bookings.user_id) > 3);
