@@ -3,7 +3,7 @@ SELECT * FROM  properties
     FROM reviews GROUP BY 
     reviews.property_id 
     HAVING reviews.property_id = properties.id 
-    and avg(reviews.property_id) > 4.0);
+    AND AVG(reviews.property_id) > 4.0);
 
 
 SELECT * FROM users 
@@ -11,4 +11,4 @@ SELECT * FROM users
   (SELECT bookings.user_id 
     FROM bookings 
     GROUP BY bookings.user_id 
-    HAVING sum(bookings.user_id) > 3);
+    HAVING SUM(bookings.user_id) > 3);
