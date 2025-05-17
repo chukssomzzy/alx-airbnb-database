@@ -11,7 +11,8 @@ SELECT count(b.id)
 SELECT 
     p.*, 
     COUNT(b.property_id) as booking_count, 
-    RANK() OVER (ORDER BY COUNT(b.property_id)) as booking_rank 
+    RANK() OVER (ORDER BY COUNT(b.property_id) DESC) as booking_rank, 
+    ROW_NUMBER() OVER (ORDER BY COUNT(b.property_id) DESC) as booking_rank_row 
   FROM 
     properties p 
   INNER JOIN 
