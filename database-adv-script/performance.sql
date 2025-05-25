@@ -21,7 +21,7 @@ FROM booking b
 INNER JOIN users u ON u.id = b.user_id
 INNER JOIN properties p ON p.id = b.property_id
 INNER JOIN payments pay ON pay.booking_id = b.id
-WHERE b.status = 'confirmed' AND u.email LIKE '@example.com%';
+  WHERE b.status = 'confirmed' AND u.email LIKE '@example.com%';
 
 CREATE INDEX idx_booking_user_id ON booking(user_id);
 CREATE INDEX idx_booking_property_id ON booking(property_id);
